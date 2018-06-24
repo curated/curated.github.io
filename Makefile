@@ -16,5 +16,6 @@ copy:
 	rm -f *.map
 
 push: clean build copy
-	@git commit -v -m "Update assets" && \
+	@git add . && \
+	git commit -v -m "Update assets" && \
 	git push origin master
