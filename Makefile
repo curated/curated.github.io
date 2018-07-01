@@ -17,5 +17,5 @@ copy:
 
 push: clean build copy
 	@git add . && \
-	git commit -v -m "Update assets" && \
+	git commit -vm "Deploy $(shell git --git-dir=../web/.git rev-list --max-count=1 HEAD)" && \
 	git push origin master
